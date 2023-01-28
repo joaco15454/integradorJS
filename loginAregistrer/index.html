@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./mediaqueries.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container__login">
+            <div class="imagen__container">
+                <img src="./marvel.webp" alt="">
+            </div>
+        
+        <div class="container__form">
+            <div class="container__inicio">
+                <h2 class="active inicio">Inicio de sesion</h2>
+                <p>o</p>
+                <h2 class="registro">Registrarse</h2>
+            </div>
+            <div class="container__total">
+                <form action="" class="form">
+                    <div class="container__mail flex">
+                        <label for="input__email">E-MAIL</label>
+                        <input id= "input__email"type="email" placeholder="Ingrese su email">
+                        <p class="mensaje__error__password oculto">La contraseña debe tener: una letra mayuscula, un numero y minimo, 8 caracteres</p>
+
+                    </div>
+                    <div class="container__password flex">
+                        <label for="input__password">CONTRASEÑA</label>
+                        <input id= "input__password"type="password" placeholder="Ingrese su contraseña">
+                        <p class="mensaje__error__password oculto">La contraseña debe tener: una letra mayuscula, un numero y minimo, 8 caracteres</p>
+                    </div>
+                    <div class="container__btn">
+                        <button class="btn_inicio">Iniciar sesion</button>
+                        <button class="btn_olvide">Me olvide la contraseña</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container__registro oculto">
+                <div class="container__formRegistro">
+                    <form action="" class="form">
+                        <div class="container__firstYLastName flex">
+                            <label for="input__name">Nombre y apellido</label>
+                            <input id= "input__name"type="text" placeholder="Ingrese su nombre y apellido">
+                        </div>
+                        <div class="container__mail flex">
+                            <label for="input__emailRegistro">E-mail</label>
+                            <input id= "input__emailRegistro"type="email" placeholder="Ingrese su email">
+                            <p class="mensaje__error__mail oculto">El mail debe ser valido</p>
+                        </div>
+                        <div class="container__password flex">
+                            <label for="input__passwordRegistro">Contraseña</label>
+                            <input id= "input__passwordRegistro"type="password" placeholder="Ingrese su contraseña">
+                            <p class="mensaje__error__password oculto">La contraseña debe tener: una letra mayuscula, un numero y minimo, 8 caracteres</p>
+                        </div>
+                        <div class="container__btn">
+                            <button class="btn_inicioRegistro">Registrarse</button>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+<script src="./main.js"></script>
+</body>
+</html>

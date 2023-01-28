@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b0d5a1a1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./animation.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--------Carrito, menu hamburguesa, y navbar-->
+    <header>        
+        <nav>
+            <img src="./assets/logo-removebg-preview.png" alt="logo comic" class="logo">                        
+            <div class="bars__menu">
+                <span class="line1__bars-menu"></span>
+                <span class="line2__bars-menu"></span>
+                <span class="line3__bars-menu"></span>
+            </div>
+            <ul class="navbar_list"> 
+                <li><a href="">NOVEDADES</a></li>
+                <li><a href="">COMICS</a></li>
+                <li><a href="">SOBRE NOSOTROS</a></li>
+                <li><a href="">CONTACTO</a></li>
+            </ul>            
+            <div class="user-login">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="cart-label">
+                <i class="fa-solid fa-cart-shopping" >
+                </i>
+            </div>
+            
+            <div class="comic oculto">
+                <h2>Tus Comics</h2>
+      
+                <div class="comic-container"></div>
+      
+                <span class="divider"></span>
+      
+                <div class="cart-total">
+                  <p>Total:</p>
+                  <span class="total">18.3 ETH</span>
+                </div>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-delete">Vaciar carrito</button>
+              </div>
+      
+              <div class="overlay oculto"></div>
+            </nav>
+        </nav>
+    </header>
+    <!--Carrusel de imagenes con difernetes comics-->
+    
+    <article class="carrusel-imagenes">
+        <div class="container-img">
+            <img src="./assets/fotobanner3.webp" alt="">
+            <img src="./assets/urano_pc.jpg" alt="" class="tienda">
+            <img src="./assets/conoceNuestraTinda.jpg" class="tienda" alt="">
+            
+            
+        </div>
+        
+    </article>
+
+    <!--Container de cartas-->
+    <article class="container__section__cards">
+        <div class="aviso-importante">
+            <h1 class="main-title" data-text="Nuestros comics">Nuestros comics</h1>
+            <h2 class="important_avise">¡Importante! Por el momento, contamos unicamente con comics de Marvel.</h2>
+        </div>
+        <div class="filter_comics">
+            <button>Fecha de salida</button>
+            <button>Primer Volumen</button>
+            <button>Titulo</button>
+        </div>
+        <div class="cards-container">
+            
+        </div>
+    </article>
+    <article class="container__pagination">
+        <div class="pagination">
+            <div class="left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="pages">
+                <button class="page-number">0</button>
+            </div>
+            <div class="right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>                                    
+        </div>
+    </article>
+
+    <article>
+        <div class="about_us">
+            <div class="img_about">
+                <img src="./assets/about us/marvel.webp" alt="foto about us" class="img_aboutUs">
+            </div>
+            <div class="information_about">
+                <h1>Sobre nosotros</h1>
+                <p>Somos ComiCarts, una empresa que lleva 10 años en el mercado de importacion de comics. Estamos conformados por dos dueños, Alex y Juan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nam necessitatibus fugit temporibus, ipsa minus, reprehenderit nulla animi adipisci neque labore laborum dignissimos cupiditate laudantium autem odit quae similique corporis.
+                </p>
+                <h1>Medios de pago</h1>
+                <div class="container_mediosPagos">
+                    <div class="mercado_pago ">
+                        <img src="./assets/about us/mercadopago-removebg-preview.png" alt="" class="logo_about">
+                        <span>Mercado Pago</span>
+                    </div>
+                    <div class="tarjeta_credito">
+                        <img src="./assets/about us/tarjeta_credito-removebg-preview.png" alt="" class="logo_about">
+                        <span>Tarjeta de credito/debito</span>
+                    </div>
+                    <div class="transferencia">
+                        <img src="./assets/about us/transferencia.webp" alt="" class="logo_about">
+                        <span>Transferencia Bancaria</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="article__contact">
+        <div class="container__contact" id="container__contact">
+            <h1 class="h1__contact">Contactanos</h1>
+            <div class="contact__form">
+                <div class="contact__usuario">
+                    <h3>Contactanos</h3>
+                    <form action="">
+                        <p>
+                            <label for="name">Ingrese su nombre completo</label>
+                            <input type="text" id="name">
+                        </p>
+                        <p>
+                            <label for="mail">Ingrese su mail</label>
+                            <input type="email" id="mail">
+                        </p>
+                        <p>
+                            <label for="telefono">Ingrese su numero de telofono</label>
+                            <input type="text" id="telefono">
+                        </p>
+                        <p>
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto">
+                        </p>
+                        <p class="block">
+                            <label for="mensaje">Ingrese su mensaje</label>
+                            <textarea  id="mensaje" rows="3"></textarea>
+                        </p>
+                        <p class="block">
+                            <button>Enviar</button>
+                        </p>
+                    </form>
+                </div>
+                <div class="contact__info">
+                    <h4>Mas informacion</h4>
+                    <ul>
+                        <li>
+                            
+                            <i class="fa-brands fa-whatsapp"> +54 1185403423</i>
+                        </li>
+                        <li>
+                            
+                            <i class="fa-regular fa-map">  calle falsa123</i>
+                        </li>
+                        <li>
+                            
+                            <i class="fa-regular fa-envelope"> mailfalso123@gmail.com</i>
+                        </li>
+                    </ul>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut laboriosam odit sequi dignissimos nemo quod aspernatur ipsa velit ea adipisci consectetur in ullam soluta, ab cumque repellat blanditiis distinctio quam!
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+</article>
+<script src="./request.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
+
+

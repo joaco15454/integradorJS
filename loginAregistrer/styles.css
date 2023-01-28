@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./4k-fondo-de-pantalla-de-personajes-de-marvel-scaled.jpg);
+}
+.container__login {
+    margin: 10px 10px 10px 10px;
+    background-color:  #141414;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1400px;
+    
+    -webkit-box-shadow: 2px 10px 31px 5px rgba(0,0,0,0.67);
+-moz-box-shadow: 2px 10px 31px 5px rgba(0,0,0,0.67);
+box-shadow: 2px 10px 31px 5px rgba(0,0,0,0.67);
+}
+.imagen__container {
+    height: 850px;
+    width: 800px;
+    padding: 0;
+    
+}
+img {
+    height: 100%;
+    width: 100%;
+    
+}
+.container__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    width: 700px;
+    
+    gap: 40px;
+    
+    
+}
+
+.active {
+    border-bottom: solid 2px #7db4b5;
+    
+    color: #edebe6;
+}
+h2 {
+    font-weight: 0;
+    font-size: 30px;
+    color: #4e5861;
+    cursor: pointer;
+}
+.form {
+    margin-left: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    
+    
+}
+input {
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid #d62e2e;
+    color: #edebe6;
+    background: transparent;
+    height: 50px;
+   
+}
+label {
+    font-weight: 500;
+    color: #edebe6;
+    
+   
+}
+input::placeholder{
+    color:#edebe6
+}
+.flex {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+button {
+    width: 160px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+}
+.container__btn {
+    display: flex;
+    gap: 30px;
+}
+.btn_inicio {
+   border-radius: 20px;
+   background-color:#d62e2e;
+   text-transform: uppercase;
+   color: #2e1e45;
+   font-size: 17px;
+}
+.btn_olvide {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    background: transparent;
+    text-transform: uppercase;
+    width: 60%;
+    border-bottom: 1px solid grey;
+    height: 30px;
+    
+}
+.container__inicio {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 30px;
+    
+}
+p {
+    font-size: 30px;
+}
+.oculto {
+    display: none;
+}
+
+
+
+.container__formRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btn_inicioRegistro {
+    border-radius: 20px;
+   background-color:#d62e2e;
+   color: #2e1e45;
+   font-size: 17px;
+}
+
+.error {
+    border: 1px solid red;
+}
+.mensaje__error__password, .mensaje__error__mail {
+    font-size: 15px;
+    text-align: left;
+    color: #d62e2e;
+    font-weight: 600;
+    width: 400px;
+}
