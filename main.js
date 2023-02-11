@@ -11,6 +11,10 @@ const containerComicsCart = document.querySelector(`.comic-container`)
 const priceTotal = document.querySelector(`.total`)
 const btnCompraFinal = document.querySelector(`.btn-buy`)
 const btnBorrarFinal = document.querySelector(`.btn-delete`)
+const filterContainer = document.querySelector(`.filter_comics`)
+const filterButtons = document.querySelectorAll(`.btn`)
+const openMenuResponsive = document.querySelector(`.bars__menu`)
+const menuResponsive=document.querySelector(`.navbar_list`)
 /* Movimiento del carrusel de imagenes*/
 const imgContainer = document.querySelector(`.container-img`)
 let maxScrollLeft = (Number(imgContainer.scrollWidth) - Number(imgContainer.clientWidth))
@@ -31,9 +35,32 @@ const startIMG = () => {
     }, 10)
 };
 
+
 const stopIMG = () => {
     clearInterval(intervaloImagen)
 }
+//FILTROS Y BOTON DE FILTORS
+const FilterUrl = filterType => {
+    return filterType === `ArrivalOrden` ? ArrivalOrden : filterType === `FirstVol` ? FirstVol : OnSale
+}
+const changeFilter = (e) => {
+    if (!e.target.classList.contains(`btn`) || e.target.classList.contains(`active`) ) {
+        return
+    }
+    const selectFilter = e.target.dataset.filter
+    pageController.filterSearch = FilterUrl(selectFilter) 
+    searchComic();
+    const btnFilter = [...filterButtons]
+    btnFilter.forEach(btn => {
+        if (btn.dataset.filter !== selectFilter) {
+            btn.classList.remove(`active`)
+        } else {
+            btn.classList.add(`active`)
+        }
+    })
+
+}
+
 const controlDisabilited = () => {
     if (valorOffset === 3) {
         previousPageBtn.classList.add(`deshabilitado`)
@@ -41,6 +68,7 @@ const controlDisabilited = () => {
         previousPageBtn.classList.remove(`deshabilitado`)
     }
 }
+ //Agregar btn active
 //CARRITO
 let comicSelected = JSON.parse(localStorage.getItem(`comicSelected`)) || []; 
 
@@ -193,7 +221,12 @@ const statusButton = () => {
         btnCompraFinal.classList.remove(`deshabilitado`)
     }
 }
-
+    
+const searchComic = async () => {
+    const results = await fetchComics(pageController.filterSearch)
+    const resultsData = results.data.results        
+    renderComics(resultsData)
+}
 //INIT
 const init = () => {
     imgContainer.addEventListener(`mouseover`, () => {
@@ -206,16 +239,15 @@ const init = () => {
         startIMG() /*funcion del carrusel*/
         /*PARTE COMICS*/
         controlDisabilited()
-        const results = await fetchComics()
-        const resultsData = results.data.results        
-        renderComics(resultsData)
+        
         
     })
+    window.addEventListener(`DOMContentLoaded`, searchComic)
     nextPageBtn.addEventListener(`click`, async () => {
         
         valorOffset+=8
         controlDisabilited()
-        const results = await fetchComics(valorOffset)
+        const results = await fetchComics(pageController.filterSearch,valorOffset)
         const resultsData = results.data.results        
         renderComics(resultsData)
         pageController.page+=1
@@ -229,7 +261,7 @@ const init = () => {
         pageController.page-=1
         pageNumberbtn.innerHTML=pageController.page
         valorOffset-=8
-        const results = await fetchComics(valorOffset)
+        const results = await fetchComics(pageController.filterSearch,valorOffset)
         const resultsData = results.data.results        
         renderComics(resultsData)
     })
@@ -249,22 +281,34 @@ const init = () => {
 
     document.addEventListener(`DOMContentLoaded`, statusButton) //deshabilita los botones de comprar y borrar carrito
     containerComics.addEventListener(`click`, statusButton)
+
+    //Filtrar
+    filterContainer.addEventListener("click",changeFilter)
+
+    openMenuResponsive.addEventListener("click",()=> {
+        menuResponsive.classList.toggle(`ocultoBars`)
+    })
     }
 
 init()
-
-
 
 
 /*COMICS*/
 let valorOffset = 3 // va a ir cambiando segun la paginacion
 const pageController = {
     page:0,
+    filterSearch:ArrivalOrden, 
 };
 
 const conversionDolarPeso = (precioDolar) => {
-    const pasadoAPeso = Math.floor(Number(precioDolar) * 355)  
-    return pasadoAPeso
+    const pasadoAPeso = Math.floor(Number(precioDolar) * 355)
+    if (pasadoAPeso === 0) {
+        return 2000 //Algunos comics no tienen precio, valor por defecto
+    }
+    else {
+        return pasadoAPeso  
+    }  
+
 } 
 
 

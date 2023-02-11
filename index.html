@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src="https://kit.fontawesome.com/5b0d5a1a1f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./animation.css">
+    <link rel="stylesheet" href="./mediaqueries.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,18 +17,16 @@
         <nav>
             <img src="./assets/logo-removebg-preview.png" alt="logo comic" class="logo">                        
             <div class="bars__menu">
-                <span class="line1__bars-menu"></span>
-                <span class="line2__bars-menu"></span>
-                <span class="line3__bars-menu"></span>
+                <i class="fa-solid fa-bars"></i>
             </div>
-            <ul class="navbar_list"> 
+            <ul class="navbar_list ocultoBars"> 
                 <li><a href="">NOVEDADES</a></li>
-                <li><a href="">COMICS</a></li>
-                <li><a href="">SOBRE NOSOTROS</a></li>
-                <li><a href="">CONTACTO</a></li>
+                <li><a href=".cards-container">COMICS</a></li>
+                <li><a href=".information_about">SOBRE NOSOTROS</a></li>
+                <li><a href=".contact__info">CONTACTO</a></li>
             </ul>            
             <div class="user-login">
-                <i class="fa-solid fa-user"></i>
+                <a href="./loginAregistrer/index.html"><i class="fa-solid fa-user"></i></a>
             </div>
             <div class="cart-label">
                 <i class="fa-solid fa-cart-shopping" >
@@ -72,13 +72,30 @@
             <h2 class="important_avise">¡Importante! Por el momento, contamos unicamente con comics de Marvel.</h2>
         </div>
         <div class="filter_comics">
-            <button>Fecha de salida</button>
-            <button>Primer Volumen</button>
-            <button>Titulo</button>
+            <button class="btn_order btn active" data-filter="ArrivalOrden">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                ORDEN DE LLEGADA
+            </button>
+            <button class="btn_firstVol btn" data-filter="FirstVol">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Primer Volumen</button>
+            <button class="btn_onSaleDate btn" data-filter="OnSale">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                FECHA DE SALIDA</button>
         </div>
         <div class="cards-container">
             
         </div>
+        
     </article>
     <article class="container__pagination">
         <div class="pagination">
@@ -92,35 +109,114 @@
                 <i class="fa-solid fa-chevron-right"></i>
             </div>                                    
         </div>
+       
     </article>
-
+    <div class="container_carga">
+        <div class="carga"></div>
+    </div>
     <article>
         <div class="about_us">
-            <div class="img_about">
-                <img src="./assets/about us/marvel.webp" alt="foto about us" class="img_aboutUs">
+            <div class="primera_seccion">
+                <div class="img_about">
+                    <img src="./assets/about_us/seccionComic.jpg" alt="foto about us" class="img_aboutUs">
+                </div>
+                <div class="information_about">
+                    <h1>Sobre nosotros</h1>
+                    <p>Somos ComiCarts, una empresa que lleva 10 años en el mercado de importacion de comics. Estamos conformados por dos dueños, Alex y Juan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nam necessitatibus fugit temporibus, ipsa minus, reprehenderit nulla animi adipisci neque labore laborum dignissimos cupiditate laudantium autem odit quae similique corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eos autem voluptas, repellendus architecto quasi molestiae tenetur, assumenda consectetur sapiente velit quae harum, mollitia minus aut fugit quaerat corrupti illo.
+                    </p>
+                </div>
             </div>
-            <div class="information_about">
-                <h1>Sobre nosotros</h1>
-                <p>Somos ComiCarts, una empresa que lleva 10 años en el mercado de importacion de comics. Estamos conformados por dos dueños, Alex y Juan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nam necessitatibus fugit temporibus, ipsa minus, reprehenderit nulla animi adipisci neque labore laborum dignissimos cupiditate laudantium autem odit quae similique corporis.
-                </p>
-                <h1>Medios de pago</h1>
-                <div class="container_mediosPagos">
-                    <div class="mercado_pago ">
-                        <img src="./assets/about us/mercadopago-removebg-preview.png" alt="" class="logo_about">
-                        <span>Mercado Pago</span>
+            
+            <div class="segunda_seccion">
+                
+                <div class="seccion_pago">
+                    
+                    <div class="container_mediosPagos">
+                        <h1>Medios de pago</h1>
+                        <div class="mercado_pago ">
+                            <img src="./assets/about_us/mercadopago-removebg-preview.png" alt="" class="logo_about">
+                            <span>Mercado Pago</span>
+                        </div>
+                        <div class="tarjeta_credito">
+                            <img src="./assets/about_us/tarjeta_credito-removebg-preview.png" alt="" class="logo_about">
+                            <span>Tarjeta de credito/debito</span>
+                        </div>
+                        <div class="transferencia">
+                         <img src="./assets/about_us/transferencia.webp" alt="" class="logo_about">
+                            <span>Transferencia Bancaria</span>
+                        </div>
                     </div>
-                    <div class="tarjeta_credito">
-                        <img src="./assets/about us/tarjeta_credito-removebg-preview.png" alt="" class="logo_about">
-                        <span>Tarjeta de credito/debito</span>
-                    </div>
-                    <div class="transferencia">
-                        <img src="./assets/about us/transferencia.webp" alt="" class="logo_about">
-                        <span>Transferencia Bancaria</span>
+                    <div class="img_dinero">
+                        <img src="./assets/about_us/HD-wallpaper-deadpool-comic-books-marvel-money.jpg" alt="">
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+        </div>       
     </article>
+   <section class="opiniones_clientes">
+        <h1 class="title_opinion">Algunas opiniones de nuestros clientes</h1>
+        <div class="container_comentarios">
+            <div class="comentarios">
+                <i class="fa-regular fa-comment-dots"></i>
+                <div class="user">
+                    <img src="./assets/about_us/opinionCliente/tonyStark.jpg" alt="">
+                    <h3>Tony Stark</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="comentarios_cliente">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non placeat, temporibus dolore dolor possimus alias adipisci!
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="comentarios">
+                <i class="fa-regular fa-comment-dots"></i>
+                <div class="user">
+                    <img src="./assets/about_us/opinionCliente/MarkRuffalo.jpg" alt="">
+                    <h3>Mark Ruffalo</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="comentarios_cliente">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non placeat, temporibus dolore dolor possimus alias adipisci!
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="comentarios">
+                <i class="fa-regular fa-comment-dots"></i>
+                <div class="user">
+                    <img src="./assets/about_us/opinionCliente/ChrisEvans.jpg" alt="">
+                    <h3>Chris Evans</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="comentarios_cliente">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non placeat, temporibus dolore dolor possimus alias adipisci!
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
     <article class="article__contact">
         <div class="container__contact" id="container__contact">
             <h1 class="h1__contact">Contactanos</h1>
@@ -177,6 +273,19 @@
         </div>
     
 </article>
+
+    <footer>
+        <div class="footer">
+            
+            <div class="redes_sociales">
+                <i class="fa-brands fa-facebook" id="facebook"></i>
+                <i class="fa-brands fa-twitter" id="twitter"></i>
+                <i class="fa-brands fa-instagram" id="instagram"></i>
+                <i class="fa-brands fa-linkedin" id="linkedin"></i>
+            </div>
+        </div>
+    </footer>
+    
 <script src="./request.js"></script>
 <script src="./main.js"></script>
 </body>

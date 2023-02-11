@@ -81,10 +81,10 @@ const init = () => {
         generalValidation(emailIngresado,passwordIngresada)
         
     })
-    btnIniciarSesion.addEventListener(`click`,(e)=> {
+    /*btnIniciarSesion.addEventListener(`click`,(e)=> {
         e.preventDefault();
         generalValidation(mailIniciarSesion,passwordIniciarSesion)
-    })
+    })*/
 
 
 }

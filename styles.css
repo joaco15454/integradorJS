@@ -26,7 +26,9 @@ html {
 
 /* SECCION NAVBAR */    
     
-
+.bars__menu{
+    display: none;
+}
 
 
 .logo {
@@ -261,9 +263,10 @@ margin-top: -70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15%;
+    gap: 14%;
 }
-.filter_comics button {
+
+.btn {
     width: 20%;
     height: 60px;
     background-color: #b70e21;
@@ -271,7 +274,64 @@ margin-top: -70px;
     cursor: pointer;
     font-size: 20px;
     letter-spacing: 1px;
+    border-radius: 15px;
+    position: relative;
+    padding: 10px 15px;
+    overflow: hidden;
 }
+.active {
+    background-color: #0b2e59;
+    
+}
+.filter_comics button:hover {
+    border: none;
+    border-radius: 0;
+}
+/*ANIMACION BOTON*/
+.filter_comics button span {
+    position: absolute;
+    
+    background-color: #0b2e59;
+    transition: .5s;
+}
+
+button span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top:0;
+    left:-100%
+}
+button span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    bottom:0;
+    right:-100%
+}
+button span:nth-child(3) {
+    width: 2px;
+    height: 100%;
+    bottom:-100%;
+    left:0;
+}
+button span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    top:-100%;
+    right:0;
+}
+button:hover span:nth-child(1) {
+    left: 0;
+}
+button:hover span:nth-child(2) {
+    right: 0;
+}
+button:hover span:nth-child(3) {
+    bottom: 0;
+}
+button:hover span:nth-child(4) {
+    top: 0;
+}
+
 .container__section__cards {
     width: 90%;
     padding: 20px 0px;
@@ -293,7 +353,7 @@ margin-top: -70px;
     font-weight: 600;
     color: #6bacbf;
     position: relative;
-    -webkit-text-stroke: 0.3vw #ece5ce;
+    -webkit-text-stroke: 0.3vw #141414;
     text-transform: uppercase;
     white-space : nowrap;
 }
@@ -334,7 +394,7 @@ margin-top: -70px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
      }
-.card {
+.card {    /*COMIC QUE VIENEN DE LA API*/
     width: 300px;
     height: 520px;
     background-size: cover;
@@ -488,54 +548,92 @@ box-shadow: 10px 0px 34px 14px rgba(0,0,0,0.75);
 
 /* ABOUT US */
 .about_us {
-    margin: 10% auto;
-    width: 90%;
+    margin: 20% auto;
+    width: 100%;
+    height: 500px;
     display: flex;
     justify-content: center;
-    background-color: #870000;
-    border-radius: 35px;
+    
+    flex-direction: column;
+    
+}
+.primera_seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:dodgerblue;
+    border-top: 3px solid black;
+
 }
 .img_about {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #870000;
-    
-    height: 760px;
-    width: 100%;
+    background-color:dodgerblue;
+    height: 100%;
+    padding: 20px;
 }
 .img_aboutUs {
-    width: 90%;
-    height: 90%;
+    width: 600px;
+    height: 450px;
     
 }
 .information_about {
     height: 90%;
-    margin-top: 2%;
-    width: 50%;
+    margin-left: 15%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 .information_about h1 {
-    font-size: 40px;
-    color:#ff9a52;
+    font-size: 50px;
+    color:#280921;
     font-weight: 600;
+    text-transform: uppercase;
 }
 .information_about p {
-    color: #141414;
+    color:#280921;
     font-weight: 600;
     font-size: 20px;
+}
+.segunda_seccion {
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgb(217, 168, 168);
+    border-bottom: 3px solid black;
+    
+}
+
+.segunda_seccion h1 {
+    font-size: 50px;
+    color:#01609f;
+    font-weight: 600;
+    margin-left: -25%;
+    text-transform: uppercase;
 }
 .logo_about {
     width: 10%;
 }
+.seccion_pago {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
 .container_mediosPagos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: left;
+    align-items: flex-start;
     gap: 30px;
+    margin-left: -5%;
+}
+.container_mediosPagos img {
+    width: 100px;
+    height: 90px;
 }
 .mercado_pago {
     display: flex;
@@ -544,28 +642,102 @@ box-shadow: 10px 0px 34px 14px rgba(0,0,0,0.75);
     
 }
 .mercado_pago span {
-    margin-top: 1.5%;
-    color: #248f8d;
+    margin-top: 7.5%;
+    color: #01609f;
 }
 .tarjeta_credito {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     cursor:pointer;
 }
 .tarjeta_credito span {
     
-    color: #248f8d;
+    color: #01609f;
 }
 .transferencia {
     display: flex;
+    
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     cursor:pointer;
 }
 .transferencia span {
     margin-top: 2%;
-    color: #248f8d;
+    color: #01609f;
+}
+.img_dinero {
+    width: 50%;
+    display: grid;
+    place-content: center;
+    height: 500px;
+    margin-right: -12.5%;
+}
+.img_dinero img {
+    width: 600px;
+    height: 450px;
 }
 
+/*Comentarios google*/
+.title_opinion {
+    font-size: 4em;
+    color:whitesmoke;
+}
+.opiniones_clientes {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container_comentarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.comentarios { 
+    background-color:#fff;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    border: .1em solid #141414;
+    box-shadow: 0 .5em 1em #141414;
+    flex: 1 1 30em;
+    border-radius: .5em;
+}
+
+ .fa-comment-dots {
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+    font-size: 3em;
+    color: #141414;
+}
+.user img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 7em;
+    width: 7em;
+    margin-top: 2em;
+}
+.user h3 {
+    color: #b70e21;
+    font-size: 2em;
+}
+.stars i {
+    color: #0b2e59;
+    font-size: 1.5em;
+    padding: 1em 0;
+}
+.comentarios_cliente {
+    color: #000;
+    font-size: 1.2em;
+    padding: 1em;
+}
 /* ZONA CONTACTO */
 
 .container__contact{
@@ -618,6 +790,7 @@ box-shadow: 10px 0px 34px 14px rgba(0,0,0,0.75);
     outline: 0;
     color: #fff;
     border-bottom: 1px solid #d63031;
+    
 }
 .contact__usuario form button {
     background-color: #b70e21;
@@ -656,23 +829,43 @@ box-shadow: 10px 0px 34px 14px rgba(0,0,0,0.75);
     padding: .3em;
 }
 
-@media (min-width:700px) {
-    .contact__form {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        
-    }
-    .contact__form > * {
-        padding: 2em;
-    }
-    .contact__info h4,
-    .contact__info ul,
-    .contact__info p {
-        font-size: 17px;
-        padding: 1em;
-        text-align: left;
-    }
-    .contact__info i {
-        width: 100%;
-    }
+/*ZONA FOOTER*/
+footer{
+    width: 100%;
+    
+}
+.footer{
+    height: 200px;
+    background-color: #18191f;
+}
+.redes_sociales {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#facebook,
+#twitter,
+#instagram,
+#linkedin {
+    font-size: 4em;
+    background-color: #18191f;
+    color: #fff;
+    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080, 2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+    border-radius: 29px;
+    padding: 11px 19px;
+    margin: 0 40px;
+    animation: colorShadow 3s linear infinite;
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+}
+#facebook {
+    animation-delay: 0.3s;
+}
+#twitter {
+    animation-delay: 0.7s;
+}
+#github {
+    animation-delay: 0.1;
 }
