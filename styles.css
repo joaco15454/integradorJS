@@ -8,21 +8,27 @@
     color: #ebe8e8;
 
 }
+
+
 body {
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
-    background-image: url(./pexels-photo-7809122.jpeg);
-    
+    background-image: url(./assets/pexels-photo-7809122.jpeg);
+ 
 }
 
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 65px;
+a{
+    transition: all 0.5s ease-in-out;
   }
   
-
+  a[href^="#"]:hover {
+    color: #f00;
+  }
+  
+  
+  
 
 /* SECCION NAVBAR */    
     

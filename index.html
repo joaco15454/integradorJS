@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script src="https://kit.fontawesome.com/5b0d5a1a1f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./animation.css">
     <link rel="stylesheet" href="./mediaqueries.css">
     <title>Document</title>
 </head>
+
 <body>
     <!--------Carrito, menu hamburguesa, y navbar-->
-    <header>        
+    <header>
         <nav>
-            <img src="./assets/logo-removebg-preview.png" alt="logo comic" class="logo">                        
+            <img src="./assets/logo-removebg-preview.png" alt="logo comic" class="logo">
             <div class="bars__menu">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <ul class="navbar_list ocultoBars"> 
-                <li><a href="">NOVEDADES</a></li>
-                <li><a href=".cards-container">COMICS</a></li>
-                <li><a href=".information_about">SOBRE NOSOTROS</a></li>
-                <li><a href=".contact__info">CONTACTO</a></li>
-            </ul>            
+            <ul class="navbar_list ocultoBars">
+                <li><a href="#">NOVEDADES</a></li>
+                <li><a href="#comics_container">COMICS</a></li>
+                <li><a href="#nosotros">SOBRE NOSOTROS</a></li>
+                <li><a href="#article__contact">CONTACTO</a></li>
+            </ul>
             <div class="user-login">
                 <a href="./loginAregistrer/index.html"><i class="fa-solid fa-user"></i></a>
             </div>
             <div class="cart-label">
-                <i class="fa-solid fa-cart-shopping" >
+                <i class="fa-solid fa-cart-shopping">
                 </i>
             </div>
-            
+
             <div class="comic oculto">
                 <h2>Tus Comics</h2>
-      
+
                 <div class="comic-container"></div>
-      
+
                 <span class="divider"></span>
-      
+
                 <div class="cart-total">
-                  <p>Total:</p>
-                  <span class="total">18.3 ETH</span>
+                    <p>Total:</p>
+                    <span class="total">18.3 ETH</span>
                 </div>
                 <button class="btn-buy">Comprar</button>
                 <button class="btn-delete">Vaciar carrito</button>
-              </div>
-      
-              <div class="overlay oculto"></div>
-            </nav>
+            </div>
+
+            <div class="overlay oculto"></div>
+        </nav>
         </nav>
     </header>
     <!--Carrusel de imagenes con difernetes comics-->
-    
+
     <article class="carrusel-imagenes">
         <div class="container-img">
             <img src="./assets/fotobanner3.webp" alt="">
             <img src="./assets/urano_pc.jpg" alt="" class="tienda">
             <img src="./assets/conoceNuestraTinda.jpg" class="tienda" alt="">
-            
-            
+
+
         </div>
-        
+
     </article>
 
     <!--Container de cartas-->
@@ -92,10 +94,10 @@
                 <span></span>
                 FECHA DE SALIDA</button>
         </div>
-        <div class="cards-container">
-            
+        <div class="cards-container" id="comics_container">
+
         </div>
-        
+
     </article>
     <article class="container__pagination">
         <div class="pagination">
@@ -107,14 +109,14 @@
             </div>
             <div class="right">
                 <i class="fa-solid fa-chevron-right"></i>
-            </div>                                    
+            </div>
         </div>
-       
+
     </article>
     <div class="container_carga">
         <div class="carga"></div>
     </div>
-    <article>
+    <article id="nosotros">
         <div class="about_us">
             <div class="primera_seccion">
                 <div class="img_about">
@@ -122,15 +124,21 @@
                 </div>
                 <div class="information_about">
                     <h1>Sobre nosotros</h1>
-                    <p>Somos ComiCarts, una empresa que lleva 10 años en el mercado de importacion de comics. Estamos conformados por dos dueños, Alex y Juan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nam necessitatibus fugit temporibus, ipsa minus, reprehenderit nulla animi adipisci neque labore laborum dignissimos cupiditate laudantium autem odit quae similique corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eos autem voluptas, repellendus architecto quasi molestiae tenetur, assumenda consectetur sapiente velit quae harum, mollitia minus aut fugit quaerat corrupti illo.
+                    <p>Somos ComiCarts, una empresa que lleva 10 años en el mercado de importacion de comics. Estamos
+                        conformados por dos dueños, Alex y Juan. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Accusamus nam necessitatibus fugit temporibus, ipsa minus, reprehenderit nulla animi
+                        adipisci neque labore laborum dignissimos cupiditate laudantium autem odit quae similique
+                        corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eos autem voluptas,
+                        repellendus architecto quasi molestiae tenetur, assumenda consectetur sapiente velit quae harum,
+                        mollitia minus aut fugit quaerat corrupti illo.
                     </p>
                 </div>
             </div>
-            
+
             <div class="segunda_seccion">
-                
+
                 <div class="seccion_pago">
-                    
+
                     <div class="container_mediosPagos">
                         <h1>Medios de pago</h1>
                         <div class="mercado_pago ">
@@ -142,7 +150,7 @@
                             <span>Tarjeta de credito/debito</span>
                         </div>
                         <div class="transferencia">
-                         <img src="./assets/about_us/transferencia.webp" alt="" class="logo_about">
+                            <img src="./assets/about_us/transferencia.webp" alt="" class="logo_about">
                             <span>Transferencia Bancaria</span>
                         </div>
                     </div>
@@ -151,12 +159,12 @@
                     </div>
                 </div>
             </div>
-            </div>
-        </div>       
+        </div>
+        </div>
     </article>
-   <section class="opiniones_clientes">
+    <section class="opiniones_clientes">
         <h1 class="title_opinion">Algunas opiniones de nuestros clientes</h1>
-        <div class="container_comentarios">
+        <div class="container_comentarios" id="comentarios">
             <div class="comentarios">
                 <i class="fa-regular fa-comment-dots"></i>
                 <div class="user">
@@ -170,7 +178,9 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <div class="comentarios_cliente">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non placeat, temporibus dolore dolor possimus alias adipisci!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit
+                        voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non
+                        placeat, temporibus dolore dolor possimus alias adipisci!
                     </div>
                 </div>
             </div>
@@ -189,7 +199,9 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <div class="comentarios_cliente">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non placeat, temporibus dolore dolor possimus alias adipisci!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit
+                        voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non
+                        placeat, temporibus dolore dolor possimus alias adipisci!
                     </div>
                 </div>
             </div>
@@ -208,12 +220,14 @@
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <div class="comentarios_cliente">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non placeat, temporibus dolore dolor possimus alias adipisci!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloribus dignissimos fugit
+                        voluptatem similique, reprehenderit nobis ratione odit reiciendis deleniti qui quos, non
+                        placeat, temporibus dolore dolor possimus alias adipisci!
                     </div>
                 </div>
             </div>
 
-            
+
         </div>
     </section>
 
@@ -242,7 +256,7 @@
                         </p>
                         <p class="block">
                             <label for="mensaje">Ingrese su mensaje</label>
-                            <textarea  id="mensaje" rows="3"></textarea>
+                            <textarea id="mensaje" rows="3"></textarea>
                         </p>
                         <p class="block">
                             <button>Enviar</button>
@@ -253,30 +267,32 @@
                     <h4>Mas informacion</h4>
                     <ul>
                         <li>
-                            
+
                             <i class="fa-brands fa-whatsapp"> +54 1185403423</i>
                         </li>
                         <li>
-                            
-                            <i class="fa-regular fa-map">  calle falsa123</i>
+
+                            <i class="fa-regular fa-map"> calle falsa123</i>
                         </li>
                         <li>
-                            
+
                             <i class="fa-regular fa-envelope"> mailfalso123@gmail.com</i>
                         </li>
                     </ul>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut laboriosam odit sequi dignissimos nemo quod aspernatur ipsa velit ea adipisci consectetur in ullam soluta, ab cumque repellat blanditiis distinctio quam!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut laboriosam odit sequi dignissimos
+                        nemo quod aspernatur ipsa velit ea adipisci consectetur in ullam soluta, ab cumque repellat
+                        blanditiis distinctio quam!
                     </p>
                 </div>
             </div>
         </div>
-    
-</article>
+
+    </article>
 
     <footer>
         <div class="footer">
-            
+
             <div class="redes_sociales">
                 <i class="fa-brands fa-facebook" id="facebook"></i>
                 <i class="fa-brands fa-twitter" id="twitter"></i>
@@ -285,10 +301,9 @@
             </div>
         </div>
     </footer>
-    
-<script src="./request.js"></script>
-<script src="./main.js"></script>
+
+    <script src="./request.js"></script>
+    <script src="./main.js"></script>
 </body>
+
 </html>
-
-
